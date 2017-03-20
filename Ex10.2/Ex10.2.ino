@@ -46,7 +46,9 @@ void loop() {
 
   if (dir == -1 || !compare(sequence, code, st)) {
     st = 0;
-    sequence = {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};
+    for (int i = 0; i < 10; i++) {
+      sequence[i] = -1;
+    }
   }
   else {
     st++;
